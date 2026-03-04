@@ -10,13 +10,24 @@ define('DB_USER', 'u757840095_Yaroslav');
 define('DB_PASS', 'l1@ArIsM');
 define('DB_DATABASE', 'u757840095_Intebwio');
 
-// PDO Connection
+// PDO Connection - with graceful error handling
+$pdo = null;
+$db_error = null;
+
 try {
     $pdo = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_DATABASE . ';charset=utf8mb4', DB_USER, DB_PASS);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
-    die(json_encode(['error' => 'Database connection failed: ' . $e->getMessage()]));
+    // Don't die - log the error but allow the app to continue
+    // This allows API testing even if database is not available
+    $db_error = $e->getMessage();
+    error_log("⚠️  Database connection failed: " . $db_error);
+    error_log("   Check: 1) Database server running 2) PDO MySQL extension 3) Credentials");
+    
+    // For HTML pages, we can still work with file-based fallback
+    // For API, we'll need to handle this gracefully in the endpoint
+    $pdo = null; // Set to null so code can check if DB is available
 }
 
 // Application Configuration

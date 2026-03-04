@@ -25,6 +25,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit;
 }
 
+// Check if database is available
+if (!$pdo) {
+    http_response_code(503);
+    echo json_encode([
+        'success' => false,
+        'error' => 'Database connection unavailable',
+        'details' => 'The database server is not accessible or PDO MySQL extension is missing',
+        'troubleshooting' => [
+            'Check if MySQL/MariaDB server is running',
+            'Verify PDO MySQL PHP extension is installed: php8.0-mysql',
+            'Check database credentials in /public_html/includes/config.php',
+            'Check network connectivity to database server'
+        ],
+        'diagnostic_url' => '/diagnose-api.php',
+        'timestamp' => date('Y-m-d H:i:s')
+    ]);
+    exit;
+}
+
 try {
     $action = $_GET['action'] ?? $_POST['action'] ?? 'generate';
     $query = $_GET['query'] ?? $_POST['query'] ?? '';
@@ -73,6 +92,17 @@ try {
  * 5. Return from database
  */
 function handleSearch($pdo, $query) {
+    // Validate $pdo is available
+    if (!$pdo) {
+        http_response_code(503);
+        echo json_encode([
+            'success' => false,
+            'error' => 'Database unavailable',
+            'timestamp' => date('Y-m-d H:i:s')
+        ]);
+        exit;
+    }
+    
     // Step 1: Check for exact match (case-insensitive)
     $stmt = $pdo->prepare("
         SELECT id, query, slug, title, description, html_content, view_count, 
@@ -109,7 +139,7 @@ function handleSearch($pdo, $query) {
             'message' => 'Found exact match in database',
             'timestamp' => date('Y-m-d H:i:s')
         ]);
-        return;
+        exit;
     }
     
     // Step 2: Check for similar pages
@@ -161,12 +191,13 @@ function handleSearch($pdo, $query) {
             'message' => 'Found similar page: "' . $bestMatch['query'] . '"',
             'timestamp' => date('Y-m-d H:i:s')
         ]);
-        return;
+        exit;
     }
     
     // Step 3: No page found - Call Gemini API to generate new page
     error_log("=== STARTING NEW PAGE GENERATION FOR QUERY: " . $query);
     createNewPageWithGemini($pdo, $query);
+    exit; // Important: prevent further code execution
 }
 
 /**
@@ -319,6 +350,7 @@ function createNewPageWithGemini($pdo, $query) {
             'message' => 'New page generated with Gemini API and stored in database',
             'timestamp' => date('Y-m-d H:i:s')
         ]);
+        exit;
         
     } catch (Exception $e) {
         error_log("❌ GENERATION FAILED: " . $e->getMessage());
@@ -359,7 +391,6 @@ function createNewPageWithGemini($pdo, $query) {
             'timestamp' => date('Y-m-d H:i:s')
         ]);
     }
-}
 }
 
 /**

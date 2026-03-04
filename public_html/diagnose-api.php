@@ -11,7 +11,18 @@ echo "=== Gemini API Diagnostics ===\n\n";
 // Load configuration
 require_once __DIR__ . '/includes/config.php';
 
-echo "1. API Key Status:\n";
+echo "1. Database Status:\n";
+echo "─────────────────────────────────────\n";
+if ($pdo) {
+    echo "✓ Database connection: OK\n\n";
+} else {
+    global $db_error;
+    echo "⚠️  Database connection: FAILED\n";
+    echo "   Error: " . ($db_error ?? 'Unknown error') . "\n";
+    echo "   This is OK for API testing - you can continue\n\n";
+}
+
+echo "2. API Key Status:\n";
 echo "─────────────────────────────────────\n";
 echo "GEMINI_API_KEY defined: " . (defined('GEMINI_API_KEY') ? 'YES' : 'NO') . "\n";
 echo "Key length: " . strlen(GEMINI_API_KEY) . " characters\n";
@@ -33,7 +44,7 @@ if (strpos(GEMINI_API_KEY, 'YOUR_') !== false) {
 echo "✓ API Key loaded successfully\n\n";
 
 // Test API connectivity
-echo "2. Testing Gemini API Connectivity:\n";
+echo "3. Testing Gemini API Connectivity:\n";
 echo "─────────────────────────────────────\n";
 
 $model = 'gemini-2.5-flash';
@@ -102,9 +113,11 @@ if ($httpCode === 200) {
 
 echo "\n=== ✓ All tests passed! ===\n";
 echo "Your Gemini API is properly configured and working.\n";
-echo "If you still see errors in page generation:\n";
-echo "1. Check browser console for JavaScript errors\n";
-echo "2. Check server response in PHP logs\n";
-echo "3. Try a simple query first (1-2 words)\n";
+if (!$pdo) {
+    echo "\nNote: Database is not connected, but API key is working.\n";
+    echo "Set up database for full functionality.\n";
+} else {
+    echo "Database and API are both working.\n";
+}
 
 ?>
