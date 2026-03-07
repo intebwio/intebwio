@@ -71,14 +71,5 @@ ini_set('error_log', LOG_FILE);
 ini_set('max_execution_time', 600);  // 10 minutes for content generation
 ini_set('default_socket_timeout', 180);  // 3 minutes for external API calls
 
-// Enable CORS for API
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
-header('Access-Control-Allow-Headers: Content-Type, Authorization');
-
-if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
-    http_response_code(200);
-    exit();
-}
-
 ?>
+

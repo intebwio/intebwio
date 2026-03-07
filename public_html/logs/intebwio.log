@@ -1,4 +1,1 @@
-[04-Mar-2026 09:10:53 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /workspaces/intebwio-/public_html/diagnose-api.php:9) in /workspaces/intebwio-/public_html/includes/config.php on line 75
-[04-Mar-2026 09:10:53 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /workspaces/intebwio-/public_html/diagnose-api.php:9) in /workspaces/intebwio-/public_html/includes/config.php on line 76
-[04-Mar-2026 09:10:53 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /workspaces/intebwio-/public_html/diagnose-api.php:9) in /workspaces/intebwio-/public_html/includes/config.php on line 77
-[04-Mar-2026 09:10:53 UTC] PHP Warning:  Undefined array key "REQUEST_METHOD" in /workspaces/intebwio-/public_html/includes/config.php on line 79
+
