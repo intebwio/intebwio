@@ -371,5 +371,3 @@ function getPageStats($pdo, $pageId) {
         'comment_stats' => $comments
     ]);
 }
-
-?>

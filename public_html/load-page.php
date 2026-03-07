@@ -118,4 +118,3 @@ try {
     ]);
     error_log("Page loading error: " . $e->getMessage());
 }
-?>

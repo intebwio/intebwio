@@ -149,4 +149,3 @@ if ($httpCode !== 200) {
 }
 
 echo "\n=== End of Diagnostic Test ===\n";
-?>

@@ -112,5 +112,3 @@ echo "  • Missing PHP extension: sudo apt-get install php8.0-mysql\n";
 echo "  • API key not set: Edit includes/apikeys.php and add your key\n";
 echo "  • Database not running: Check MySQL/MariaDB status\n";
 echo "  • File permissions: chmod 644 on PHP files, 755 on directories\n";
-
-?>

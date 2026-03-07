@@ -56,4 +56,3 @@ if ($httpCode === 200) {
     echo "Error fetching models:\n";
     echo "Response: " . $response . "\n";
 }
-?>

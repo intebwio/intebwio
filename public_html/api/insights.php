@@ -226,5 +226,3 @@ function getGrowthAnalytics($pdo, $days) {
         ]
     ]);
 }
-
-?>

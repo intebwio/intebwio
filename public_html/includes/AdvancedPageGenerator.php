@@ -429,5 +429,3 @@ SCRIPTS;
         return '<h1>' . htmlspecialchars($searchQuery) . '</h1>';
     }
 }
-
-?>

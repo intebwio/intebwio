@@ -285,5 +285,3 @@ class PageGenerator {
         return '<style>body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 0; padding: 20px; }</style>' . "\n";
     }
 }
-
-?>

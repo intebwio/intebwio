@@ -97,5 +97,3 @@ try {
         'message' => 'Server error: ' . $e->getMessage()
     ]);
 }
-
-?>

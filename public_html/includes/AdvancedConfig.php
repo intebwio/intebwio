@@ -202,5 +202,3 @@ class RateLimiter {
         $stmt->execute([$identifier]);
     }
 }
-
-?>

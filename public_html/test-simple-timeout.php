@@ -64,4 +64,3 @@ if ($totalTime > 120) {
 } else {
     echo "✓ Acceptable time\n";
 }
-?>

@@ -112,5 +112,3 @@ try {
         'message' => 'Server error'
     ]);
 }
-
-?>

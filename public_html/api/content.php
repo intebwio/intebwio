@@ -428,5 +428,3 @@ try {
         'error' => DEBUG_MODE ? $e->getMessage() : ''
     ]);
 }
-
-?>

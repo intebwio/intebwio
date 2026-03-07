@@ -224,4 +224,3 @@ echo '3. Ensure database credentials are correct<br>';
 echo '</div>';
 
 echo "</body></html>";
-?>

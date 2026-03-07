@@ -244,5 +244,3 @@ function validateSettings($pdo) {
         'issues' => $issues
     ]);
 }
-
-?>

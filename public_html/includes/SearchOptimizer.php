@@ -273,5 +273,3 @@ class SearchOptimizer {
         error_log('[SearchOptimizer] ' . $message);
     }
 }
-
-?>

@@ -276,5 +276,3 @@ class IntebwioUtils {
         return file_put_contents($filepath, json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
     }
 }
-
-?>

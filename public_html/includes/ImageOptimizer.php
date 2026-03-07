@@ -253,5 +253,3 @@ class ImageOptimizer {
         return $deleted;
     }
 }
-
-?>

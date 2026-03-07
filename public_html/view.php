@@ -143,4 +143,3 @@ try {
     http_response_code(500);
     echo "Error: " . htmlspecialchars($e->getMessage());
 }
-?>

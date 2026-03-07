@@ -252,5 +252,3 @@ if (php_sapi_name() !== 'cli') {
 
 $installer = new IntebwioInstaller();
 $installer->run();
-
-?>

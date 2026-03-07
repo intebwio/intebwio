@@ -321,5 +321,3 @@ class AdvancedSearchEngine {
         return 0;
     }
 }
-
-?>

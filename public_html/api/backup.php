@@ -209,5 +209,3 @@ function printStatus() {
         'last_backup' => !empty($backups) ? end($backups) : null
     ]);
 }
-
-?>

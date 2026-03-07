@@ -166,5 +166,3 @@ if (php_sapi_name() === 'cli' || php_sapi_name() === 'cgi-fcgi') {
     $result = $manager->runUpdates();
     exit($result['success'] ? 0 : 1);
 }
-
-?>

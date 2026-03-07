@@ -752,6 +752,3 @@ function createSlug($text) {
     $slug = trim($slug, '-');
     return substr($slug, 0, 100);
 }
-
-?>
-

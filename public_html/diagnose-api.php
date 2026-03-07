@@ -119,5 +119,3 @@ if (!$pdo) {
 } else {
     echo "Database and API are both working.\n";
 }
-
-?>

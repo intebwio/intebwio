@@ -444,5 +444,3 @@ PROMPT;
         return $json ?: [];
     }
 }
-
-?>

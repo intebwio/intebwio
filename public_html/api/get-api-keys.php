@@ -17,4 +17,3 @@ $apiKeys = [
 ];
 
 echo json_encode($apiKeys);
-?>

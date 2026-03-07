@@ -127,4 +127,3 @@ if ($totalTime > 120) {
 }
 
 echo "\n=== End of Test ===\n";
-?>

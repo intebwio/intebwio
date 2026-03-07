@@ -54,5 +54,3 @@ try {
         'message' => 'Tracking error'
     ]);
 }
-
-?>

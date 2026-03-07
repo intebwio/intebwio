@@ -45,4 +45,3 @@ $diagnostics['api_key_length'] = strlen(GEMINI_API_KEY ?? '');
 // Clean any buffered output and return clean JSON
 ob_end_clean();
 echo json_encode($diagnostics, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
-?>

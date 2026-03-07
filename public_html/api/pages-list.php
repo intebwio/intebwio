@@ -293,4 +293,3 @@ function getTrendingPages($pdo, $limit) {
         ]);
     }
 }
-?>

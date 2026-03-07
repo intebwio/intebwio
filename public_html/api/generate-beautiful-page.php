@@ -329,4 +329,3 @@ Requirements:
 Use HTML formatting for structure. Make it comprehensive (2000+ words).
 PROMPT;
 }
-?>

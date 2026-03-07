@@ -323,5 +323,3 @@ try {
     echo json_encode($errorResponse);
     error_log("=== ERROR RESPONSE SENT ===");
 }
-
-?>

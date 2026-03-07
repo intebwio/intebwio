@@ -86,5 +86,3 @@ try {
     http_response_code(500);
     echo "Error: " . $e->getMessage();
 }
-
-?>
