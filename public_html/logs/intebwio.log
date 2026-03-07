@@ -47,3 +47,14 @@ Stack trace:
 [07-Mar-2026 11:06:40 UTC] Memory usage: 0.57MB
 [07-Mar-2026 11:06:40 UTC] Max memory: 128M
 [07-Mar-2026 11:06:40 UTC] ERROR: PDO not initialized
+[07-Mar-2026 11:14:20 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /workspaces/intebwio-/public_html/diagnose-errors.php:11) in /workspaces/intebwio-/public_html/api/generate.php on line 16
+[07-Mar-2026 11:14:20 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /workspaces/intebwio-/public_html/diagnose-errors.php:11) in /workspaces/intebwio-/public_html/api/generate.php on line 17
+[07-Mar-2026 11:14:20 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /workspaces/intebwio-/public_html/diagnose-errors.php:11) in /workspaces/intebwio-/public_html/api/generate.php on line 18
+[07-Mar-2026 11:14:47 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /workspaces/intebwio-/public_html/includes/Database.php:387
+Stack trace:
+#0 /workspaces/intebwio-/public_html/api/search.php(66): Database->recordActivity()
+#1 {main}
+  thrown in /workspaces/intebwio-/public_html/includes/Database.php on line 387
+[07-Mar-2026 11:15:36 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /workspaces/intebwio-/public_html/diagnose-errors.php:11) in /workspaces/intebwio-/public_html/api/generate.php on line 16
+[07-Mar-2026 11:15:36 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /workspaces/intebwio-/public_html/diagnose-errors.php:11) in /workspaces/intebwio-/public_html/api/generate.php on line 17
+[07-Mar-2026 11:15:36 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /workspaces/intebwio-/public_html/diagnose-errors.php:11) in /workspaces/intebwio-/public_html/api/generate.php on line 18

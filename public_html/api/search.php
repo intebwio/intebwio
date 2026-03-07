@@ -24,6 +24,9 @@ if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'OPTIONS
     exit;
 }
 
+// Ensure database is available before doing anything
+requireDatabase();
+
 try {
     // Get POST data - handle both JSON and form data
     $data = [];

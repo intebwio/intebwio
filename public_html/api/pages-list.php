@@ -15,6 +15,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit;
 }
 
+// Require database for pages operations
+requireDatabase();
+
 try {
     $action = $_GET['action'] ?? $_POST['action'] ?? 'list';
     $limit = (int)($_GET['limit'] ?? $_POST['limit'] ?? 10);

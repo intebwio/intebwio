@@ -48,6 +48,21 @@ define('CONTENT_SOURCES', [
 // Load API Keys from centralized APIKeyManager
 require_once __DIR__ . '/apikeys.php';
 
+// Helper to ensure database availability in API endpoints
+function requireDatabase() {
+    global $pdo;
+    if (!$pdo) {
+        http_response_code(503);
+        echo json_encode([
+            'success' => false,
+            'error' => 'Database connection unavailable',
+            'details' => 'Ensure PDO MySQL extension is installed and database server is running'
+        ]);
+        exit;
+    }
+}
+
+
 // API Keys (loaded from environment variables or apikeys.php)
 define('GOOGLE_API_KEY', APIKeyManager::getKey('gemini'));
 define('GEMINI_API_KEY', APIKeyManager::getKey('gemini'));
