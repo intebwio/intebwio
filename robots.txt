@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Point crawlers to the sitemap for better indexing
+Sitemap: https://intebwio.github.io/intebwio/sitemap.xml
