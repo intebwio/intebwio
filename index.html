@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <!-- 
+      PROJECT SHOWCASE / TECH BLOG ARTICLE
+      Topic: Intebwio
+      This document is designed as an article or review page *about* the Intebwio project.
+      It features advanced RWD, accessibility, SEO, and interactive elements.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- SEO & Meta Tags -->
+    <title>Intebwio: Redefining Information Retrieval | Project Review</title>
+    <meta name="description" content="An in-depth look at Intebwio, a synthesis engine created by Yaroslav Ostapenko that generates custom web pages on demand using advanced AI.">
+    
+    <!-- FIRST KEYWORD MUST BE INTEBWIO -->
+    <meta name="keywords" content="intebwio, generative AI browser, Yaroslav Ostapenko, synthesis engine, web search evolution, tech review, artificial intelligence, ad-free browsing">
+    
+    <meta name="robots" content="index, follow">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://intebwio.github.io/intebwio">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Intebwio: Redefining Information Retrieval">
+    <meta property="og:description" content="Explore how Intebwio is shifting the paradigm from searching to generating the web.">
+    <meta property="og:url" content="https://intebwio.github.io/intebwio">
+    <meta property="og:type" content="article">
+    
+    <!-- Structured Data (JSON-LD) for Article -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Intebwio: Redefining Information Retrieval",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "Intebwio",
+        "creator": {
+          "@type": "Person",
+          "name": "Yaroslav Ostapenko"
+        }
+      },
+      "description": "An overview of Intebwio, the synthesis engine replacing traditional search with real-time web page generation.",
+      "url": "https://intebwio.github.io/intebwio",
+      "author": {
+        "@type": "Person",
+        "name": "Tech Reviewer"
+      }
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+
+    <style>
+        /* ==========================================================================
+           1. CSS VARIABLES & THEMING
+           ========================================================================== */
+        :root[data-theme="light"] {
+            --bg-body: #f8fafc;
+            --bg-surface: #ffffff;
+            --bg-surface-alt: #f1f5f9;
+            --bg-code: #1e293b;
+            --text-main: #334155;
+            --text-heading: #0f172a;
+            --text-muted: #64748b;
+            --text-code: #e2e8f0;
+            --border-color: #e2e8f0;
+            
+            --accent-primary: #3b82f6;
+            --accent-secondary: #8b5cf6;
+            --accent-hover: #2563eb;
+            --highlight-bg: rgba(59, 130, 246, 0.1);
+            
+            --success-color: #10b981;
+            --danger-color: #ef4444;
+            --warning-color: #f59e0b;
+            
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        :root[data-theme="dark"] {
+            --bg-body: #0f172a;
+            --bg-surface: #1e293b;
+            --bg-surface-alt: #0b1120;
+            --bg-code: #0f172a;
+            --text-main: #cbd5e1;
+            --text-heading: #f8fafc;
+            --text-muted: #94a3b8;
+            --text-code: #e2e8f0;
+            --border-color: #334155;
+            
+            --accent-primary: #60a5fa;
+            --accent-secondary: #a78bfa;
+            --accent-hover: #93c5fd;
+            --highlight-bg: rgba(96, 165, 250, 0.15);
+            
+            --success-color: #34d399;
+            --danger-color: #f87171;
+            --warning-color: #fbbf24;
+            
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+        }
+
+        :root {
+            --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+            --font-serif: 'Merriweather', Georgia, serif;
+            --font-mono: 'Fira Code', monospace;
+            
+            --max-width-article: 800px;
+            --max-width-layout: 1280px;
+            
+            --transition-speed: 0.3s;
+            --header-height: 70px;
+        }
+
+        /* ==========================================================================
+           2. RESET & BASE STYLES
+           ========================================================================== */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: calc(var(--header-height) + 20px);
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.7;
+            font-size: 1.125rem;
+            transition: background-color var(--transition-speed), color var(--transition-speed);
+            overflow-x: hidden;
+        }
+
+        a {
+            color: var(--accent-primary);
+            text-decoration: none;
+            transition: color var(--transition-speed);
+        }
+
+        a:hover {
+            color: var(--accent-hover);
+            text-decoration: underline;
+        }
+
+        img, svg {
+            display: block;
+            max-width: 100%;
+        }
+
+        ul, ol {
+            list-style-position: inside;
+        }
+
+        /* ==========================================================================
+           3. TYPOGRAPHY
+           ========================================================================== */
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--text-heading);
+            font-weight: 700;
+            line-height: 1.3;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+
+        strong {
+            font-weight: 600;
+            color: var(--text-heading);
+        }
+
+        blockquote {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            font-style: italic;
+            border-left: 4px solid var(--accent-secondary);
+            background: var(--highlight-bg);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+            color: var(--text-heading);
+        }
+
+        blockquote p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ==========================================================================
+           4. LAYOUT COMPONENTS
+           ========================================================================== */
+        
+        /* Navigation / Header */
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--header-height);
+            background-color: rgba(var(--bg-surface), 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-container {
+            width: 100%;
+            max-width: var(--max-width-layout);
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .site-brand {
+            font-weight: 800;
+            font-size: 1.25rem;
+            color: var(--text-heading);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .site-brand:hover {
+            text-decoration: none;
+            color: var(--accent-primary);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        /* Theme Toggle Button */
+        .theme-toggle {
+            background: none;
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: var(--text-main);
+            transition: all 0.2s;
+        }
+
+        .theme-toggle:hover {
+            background-color: var(--bg-surface-alt);
+            color: var(--accent-primary);
+        }
+
+        .theme-toggle svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        /* Reading Progress Bar */
+        .progress-container {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: transparent;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+            width: 0%;
+            transition: width 0.1s;
+        }
+
+        /* Main Layout Grid */
+        .layout-wrapper {
+            max-width: var(--max-width-layout);
+            margin: calc(var(--header-height) + 3rem) auto 4rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        /* ==========================================================================
+           5. ARTICLE STYLING
+           ========================================================================== */
+        .article-content {
+            min-width: 0; /* Prevents flex/grid blowouts */
+        }
+
+        .article-header {
+            margin-bottom: 3rem;
+            text-align: left;
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .meta-item svg {
+            width: 16px;
+            height: 16px;
+            stroke: currentColor;
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .badge {
+            background: var(--highlight-bg);
+            color: var(--accent-primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 99px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Extracted Content Box (To show it's a quote from Intebwio) */
+        .project-excerpt {
+            background-color: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+        }
+
+        .project-excerpt::before {
+            content: 'Official Project Excerpt';
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: var(--accent-primary);
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 2px 10px;
+            border-radius: 10px;
+            text-transform: uppercase;
+        }
+
+        /* Feature Grid */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--accent-primary);
+        }
+
+        .feature-card h4 {
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+            color: var(--accent-primary);
+            font-size: 1.1rem;
+        }
+
+        .feature-card p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        /* Stats Grid */
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .stat-box {
+            background: var(--bg-surface-alt);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .stat-number {
+            font-family: var(--font-mono);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent-secondary);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Comparison Table alternative (Side-by-side) */
+        .comparison-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .compare-box {
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .compare-header {
+            padding: 1rem 1.5rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .compare-old .compare-header {
+            background-color: rgba(239, 68, 68, 0.1);
+            color: var(--danger-color);
+            border-bottom: 1px solid rgba(239, 68, 68, 0.2);
+        }
+
+        .compare-new .compare-header {
+            background-color: rgba(16, 185, 129, 0.1);
+            color: var(--success-color);
+            border-bottom: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .compare-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background: var(--bg-surface);
+        }
+
+        .compare-list li {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .compare-list li:last-child {
+            border-bottom: none;
+        }
+
+        .compare-icon {
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            margin-top: 2px;
+        }
+
+        .compare-old .compare-icon { fill: var(--danger-color); }
+        .compare-new .compare-icon { fill: var(--success-color); }
+
+        /* Timeline / Journey Styles */
+        .timeline-container {
+            position: relative;
+            margin: 3rem 0;
+            padding-left: 2rem;
+        }
+
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--border-color);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2.5rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 0.5rem;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: var(--bg-body);
+            border: 3px solid var(--accent-primary);
+            z-index: 1;
+        }
+
+        .timeline-item.future::before {
+            border-color: var(--accent-secondary);
+            background-color: var(--accent-secondary);
+            box-shadow: 0 0 10px var(--accent-secondary);
+        }
+
+        .timeline-phase {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--accent-primary);
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            display: block;
+        }
+
+        .timeline-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-heading);
+            margin-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        /* Terminal UI for the demo section */
+        .terminal-block {
+            background-color: var(--bg-code);
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 2rem 0;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .terminal-header {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .terminal-controls {
+            display: flex;
+            gap: 6px;
+        }
+
+        .terminal-circle {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .t-red { background-color: #ff5f56; }
+        .t-yel { background-color: #ffbd2e; }
+        .t-grn { background-color: #27c93f; }
+
+        .terminal-title {
+            margin-left: auto;
+            margin-right: auto;
+            color: #8b949e;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+        }
+
+        .terminal-body {
+            padding: 1.5rem;
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            color: var(--text-code);
+            line-height: 1.6;
+            overflow-x: auto;
+        }
+
+        .line-sys { color: #79c0ff; }
+        .line-user { color: #d2a8ff; }
+        .line-engine { color: #7ee787; }
+        .line-success { color: #f2cc60; font-weight: 700; }
+        
+        .typewriter-text {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* ==========================================================================
+           6. SIDEBAR & WIDGETS
+           ========================================================================== */
+        .sidebar {
+            position: sticky;
+            top: calc(var(--header-height) + 2rem);
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .widget {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .widget-title {
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-heading);
+            margin-bottom: 1rem;
+            margin-top: 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        /* Table of Contents */
+        .toc-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .toc-list li {
+            margin-bottom: 0.75rem;
+        }
+
+        .toc-list a {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            display: block;
+            transition: all 0.2s;
+            border-left: 2px solid transparent;
+            padding-left: 10px;
+        }
+
+        .toc-list a:hover,
+        .toc-list a.active {
+            color: var(--accent-primary);
+            border-left-color: var(--accent-primary);
+            text-decoration: none;
+        }
+
+        /* Author Widget */
+        .author-info {
+            text-align: center;
+        }
+
+        .author-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            margin: 0 auto 1rem auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .author-name {
+            font-weight: 700;
+            color: var(--text-heading);
+            margin-bottom: 0.5rem;
+        }
+
+        .author-bio {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin-bottom: 0;
+        }
+
+        /* ==========================================================================
+           7. FOOTER
+           ========================================================================== */
+        .site-footer {
+            background-color: var(--bg-surface-alt);
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 2rem;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: var(--max-width-layout);
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 1rem;
+        }
+
+        .footer-text {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* ==========================================================================
+           8. RESPONSIVE DESIGN (MEDIA QUERIES)
+           ========================================================================== */
+        @media (max-width: 1024px) {
+            .layout-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                display: none; /* Hide sidebar on smaller screens to focus on article */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .stats-container {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .article-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .terminal-body {
+                font-size: 0.8rem;
+                padding: 1rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="#" class="site-brand">
+                <!-- SVG Icon for Blog -->
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                </svg>
+                Tech Review
+            </a>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-btn" aria-label="Toggle Dark/Light Mode">
+                    <!-- Moon Icon (Default for dark mode toggle) -->
+                    <svg id="theme-icon" viewBox="0 0 24 24">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Progress Bar Indicator -->
+        <div class="progress-container">
+            <div class="progress-bar" id="reading-progress"></div>
+        </div>
+    </header>
+
+    <!-- Main Content Layout -->
+    <div class="layout-wrapper">
+        
+        <!-- ARTICLE SECTION -->
+        <main class="article-content">
+            <article>
+                <header class="article-header">
+                    <span class="badge">Project Spotlight</span>
+                    <h1>Intebwio: Redefining Information Retrieval</h1>
+                    
+                    <div class="article-meta">
+                        <div class="meta-item">
+                            <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                            <span>By Tech Reviewer</span>
+                        </div>
+                        <div class="meta-item">
+                            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                            <span>Published: April 2026</span>
+                        </div>
+                        <div class="meta-item">
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            <span>8 min read</span>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="article-body" id="article-body">
+                    <p>Welcome to another deep dive on the Tech Review blog. Today, we are looking at a fascinating conceptual shift in how we browse the internet. The project is called <strong>Intebwio</strong>, and it aims to fundamentally change our relationship with web search.</p>
+                    
+                    <p>For decades, search engines have operated on a simple premise: index the existing web, and point users to the most relevant links. But what if the search engine didn't point you to an existing page? What if it <em>created</em> the page for you?</p>
+
+                    <h2 id="section-concept">The Web, Generated for You</h2>
+                    
+                    <p>According to the project's official documentation, Intebwio is distancing itself from the traditional search engine label. They describe themselves as a "synthesis engine."</p>
+
+                    <div class="project-excerpt">
+                        <p><em>"Intebwio is not a search engine. It is a synthesis engine. We don't find pages; we create the exact page you need, in real-time, tailored to your exact query."</em></p>
+                    </div>
+
+                    <p>This is a bold claim, but looking closely at the mechanics, it makes sense. Instead of returning a list of 10 blue links containing SEO-optimized filler, Intebwio leverages large language models to construct a comprehensive, ad-free article tailored specifically to the user's prompt.</p>
+
+                    <h2 id="section-origin">The Origin Story</h2>
+                    
+                    <p>The vision behind Intebwio is driven by frustration with the current state of the internet. The project was created by <strong>Yaroslav Ostapenko</strong>, who serves as the Founder & Lead Architect.</p>
+                    
+                    <blockquote>
+                        "The internet was designed as a library, but it has become a billboard. Today, searching for information means wading through SEO-optimized filler, intrusive advertisements, and fragmented articles spread across dozens of tabs."
+                        <br><br>
+                        "Intebwio was born from a radical question: What if the browser didn't search for existing pages, but wrote the perfect page for you on demand?"
+                    </blockquote>
+
+                    <p>Ostapenko's approach treats the browser not as a mere document viewer, but as a "personal researcher, writer, and designer." Using state-of-the-art Large Language Models, Intebwio aims to gather facts, understand user intent, and synthesize the information into beautifully structured articles within seconds.</p>
+
+                    <h2 id="section-demo">Experience the Engine</h2>
+                    
+                    <p>To understand how this works under the hood, let's look at a simulated log of the Intebwio Engine v2.0 processing a standard query. Notice how the engine breaks down the task into understanding, synthesizing, and rendering.</p>
+
+                    <div class="terminal-block">
+                        <div class="terminal-header">
+                            <div class="terminal-controls">
+                                <div class="terminal-circle t-red"></div>
+                                <div class="terminal-circle t-yel"></div>
+                                <div class="terminal-circle t-grn"></div>
+                            </div>
+                            <div class="terminal-title">intebwio.com/search?q=future+of+web</div>
+                        </div>
+                        <div class="terminal-body" id="term-typing">
+                            <span class="typewriter-text line-sys">> Initializing Intebwio Engine v2.0...</span>
+                            <span class="typewriter-text line-user">> User: "Explain quantum computing simply"</span>
+                            <span class="typewriter-text line-engine">> Engine: Synthesizing knowledge base...</span>
+                            <span class="typewriter-text line-engine">> Engine: Structuring document hierarchy...</span>
+                            <span class="typewriter-text line-engine">> Engine: Generating interactive data visualizations...</span>
+                            <span class="typewriter-text line-success">> Success: Page generated in 2.4s. Rendering UI.</span>
+                        </div>
+                    </div>
+
+                    <p>The project claims some impressive performance metrics regarding this generation process:</p>
+
+                    <div class="stats-container">
+                        <div class="stat-box">
+                            <div class="stat-number">0</div>
+                            <div class="stat-label">Ads Displayed</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Percent Unique Content</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">2.5s</div>
+                            <div class="stat-label">Avg. Generation Time</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">&infin;</div>
+                            <div class="stat-label">Topics Available</div>
+                        </div>
+                    </div>
+
+                    <h2 id="section-architecture">How the Engine Works (Architecture)</h2>
+                    
+                    <p>One might assume Intebwio is just a thin UI wrapper around an AI chat API. However, the documentation outlines a complex orchestration engine dedicated to producing "production-ready web pages on the fly." Here are the core pillars of their architecture:</p>
+
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <h4>Semantic Understanding</h4>
+                            <p>Analyzes your query to grasp exact intent, required depth, and necessary data structures needed to answer it perfectly.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Knowledge Synthesis</h4>
+                            <p>Utilizes Google's Gemini models to synthesize vast amounts of information into a coherent, highly structured JSON schema.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Dynamic Layouts</h4>
+                            <p>A React frontend dynamically parses the schema to select optimal UI components—from text blocks to interactive Recharts.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Edge Rendering</h4>
+                            <p>Content is generated and streamed directly to the browser, ensuring fast time-to-first-byte.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Zero Distractions</h4>
+                            <p>By generating content directly, it bypasses the ad-tech ecosystem: no popups, tracking cookies, or paywalls.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Continuous Evolution</h4>
+                            <p>As underlying AI models improve, the generation capabilities scale automatically to provide richer experiences.</p>
+                        </div>
+                    </div>
+
+                    <h2 id="section-comparison">A Paradigm Shift in Browsing</h2>
+                    
+                    <p>The most compelling argument the Intebwio team makes is the direct comparison between traditional search and their generative approach. Let's break down the differences.</p>
+
+                    <div class="comparison-wrapper">
+                        <!-- Traditional -->
+                        <div class="compare-box compare-old">
+                            <div class="compare-header">The Traditional Search Experience</div>
+                            <ul class="compare-list">
+                                <li>
+                                    <svg class="compare-icon" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                                    <span>Returns a list of 10 blue links, forcing you to hunt for answers.</span>
+                                </li>
+                                <li>
+                                    <svg class="compare-icon" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                                    <span>Requires opening multiple tabs to cross-reference fragmented data.</span>
+                                </li>
+                                <li>
+                                    <svg class="compare-icon" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                                    <span>Pages are cluttered with ads, popups, and intrusive banners.</span>
+                                </li>
+                                <li>
+                                    <svg class="compare-icon" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                                    <span>Content is often padded and written for SEO algorithms, not humans.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Intebwio -->
+                        <div class="compare-box compare-new">
+                            <div class="compare-header">The Intebwio Way</div>
+                            <ul class="compare-list">
+                                <li>
+                                    <svg class="compare-icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                                    <span>Generates one perfect, comprehensive page tailored to your prompt.</span>
+                                </li>
+                                <li>
+                                    <svg class="compare-icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                                    <span>All required information is synthesized and structured in one place.</span>
+                                </li>
+                                <li>
+                                    <svg class="compare-icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                                    <span>100% ad-free, clean, reading-focused user interface.</span>
+                                </li>
+                                <li>
+                                    <svg class="compare-icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                                    <span>Includes custom-generated data visualizations to explain complex topics.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h2 id="section-timeline">The Journey and Evolution</h2>
+                    
+                    <p>Building a platform like this requires a multi-staged approach. Yaroslav Ostapenko and the Intebwio team have outlined their development journey, showing how the concept evolved from a simple idea to a complex rendering engine.</p>
+
+                    <div class="timeline-container">
+                        <div class="timeline-item">
+                            <span class="timeline-phase">Phase 1</span>
+                            <h3 class="timeline-title">The Concept</h3>
+                            <p>Yaroslav Ostapenko conceptualizes a browser that bypasses traditional search indexing, focusing instead on generative AI to create bespoke web pages on demand.</p>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <span class="timeline-phase">Phase 2</span>
+                            <h3 class="timeline-title">Core Engine</h3>
+                            <p>Development of the proprietary JSON schema and integration with Google's Gemini models to ensure structured, reliable, and deep content generation.</p>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <span class="timeline-phase">Phase 3</span>
+                            <h3 class="timeline-title">Visual Intelligence</h3>
+                            <p>Implementation of dynamic UI rendering, allowing the engine to not just write text, but generate interactive Recharts, styled sections, and beautiful typography.</p>
+                        </div>
+                        
+                        <div class="timeline-item future">
+                            <span class="timeline-phase">The Future</span>
+                            <h3 class="timeline-title">Beyond Text</h3>
+                            <p>Upcoming features include generated interactive 3D models, real-time web scraping for up-to-the-second data synthesis, and personalized learning paths.</p>
+                        </div>
+                    </div>
+
+                    <h2 id="section-conclusion">Final Thoughts</h2>
+                    
+                    <p>The call to action from Intebwio is simple: <strong>Stop searching. Start generating.</strong></p>
+                    
+                    <p>Whether this synthesis engine fully replaces the traditional search bar remains to be seen. However, projects like Intebwio highlight a clear, growing consumer demand for less noise, fewer ads, and higher quality, direct information retrieval. By blending LLMs with dynamic UI rendering, Yaroslav Ostapenko has provided a compelling glimpse into what the future of browsing might look like.</p>
+
+                </div>
+            </article>
+            
+            <hr style="margin: 4rem 0; border: none; border-top: 1px solid var(--border-color);">
+            
+            <!-- Author / Reviewer Info -->
+            <div class="article-footer-author" style="display: flex; gap: 1.5rem; background: var(--bg-surface); padding: 2rem; border-radius: 12px; border: 1px solid var(--border-color);">
+                <div class="reviewer-avatar" style="width: 60px; height: 60px; border-radius: 50%; background: var(--text-muted); flex-shrink: 0;"></div>
+                <div>
+                    <h4 style="margin-top: 0; margin-bottom: 0.5rem;">About the Reviewer</h4>
+                    <p style="font-size: 0.95rem; margin-bottom: 0; color: var(--text-muted);">I'm an independent tech blogger exploring the boundaries of AI, web development, and UX design. I write reviews and deep-dives on the most innovative projects shaping the future of the internet.</p>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <!-- Author Widget -->
+            <div class="widget">
+                <div class="author-info">
+                    <div class="author-avatar">TR</div>
+                    <div class="author-name">Tech Reviewer</div>
+                    <p class="author-bio">Analyzing the future of web technologies and generative AI.</p>
+                </div>
+            </div>
+
+            <!-- Table of Contents Widget -->
+            <div class="widget">
+                <h3 class="widget-title">In This Article</h3>
+                <ul class="toc-list" id="toc">
+                    <li><a href="#section-concept">The Concept</a></li>
+                    <li><a href="#section-origin">The Origin Story</a></li>
+                    <li><a href="#section-demo">Experience the Engine</a></li>
+                    <li><a href="#section-architecture">Architecture</a></li>
+                    <li><a href="#section-comparison">Paradigm Shift</a></li>
+                    <li><a href="#section-timeline">The Journey</a></li>
+                    <li><a href="#section-conclusion">Conclusion</a></li>
+                </ul>
+            </div>
+            
+            <!-- Tags Widget -->
+            <div class="widget">
+                <h3 class="widget-title">Tags</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                    <span class="badge" style="margin:0; font-size: 0.75rem; background: var(--bg-surface-alt); border: 1px solid var(--border-color); color: var(--text-main);">AI</span>
+                    <span class="badge" style="margin:0; font-size: 0.75rem; background: var(--bg-surface-alt); border: 1px solid var(--border-color); color: var(--text-main);">Web Browsers</span>
+                    <span class="badge" style="margin:0; font-size: 0.75rem; background: var(--bg-surface-alt); border: 1px solid var(--border-color); color: var(--text-main);">Intebwio</span>
+                    <span class="badge" style="margin:0; font-size: 0.75rem; background: var(--bg-surface-alt); border: 1px solid var(--border-color); color: var(--text-main);">Generative UI</span>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="site-brand" style="margin-bottom: 1rem;">Tech Review Blog</div>
+            <p class="footer-text">
+                This is an independent article reviewing the Intebwio project.<br>
+                The content quoted in this article belongs to Intebwio and Yaroslav Ostapenko.
+            </p>
+            <p class="footer-text" style="font-size: 0.8rem; margin-top: 1rem;">
+                &copy; 2026 Tech Review Blog. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            /* ==========================================================================
+               1. THEME TOGGLE LOGIC (Dark/Light Mode)
+               ========================================================================== */
+            const themeBtn = document.getElementById('theme-btn');
+            const themeIcon = document.getElementById('theme-icon');
+            const htmlTag = document.documentElement;
+            
+            // SVG Paths for icons
+            const moonIcon = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>';
+            const sunIcon = '<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>';
+
+            // Check for saved theme preference, otherwise use dark as default
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            htmlTag.setAttribute('data-theme', savedTheme);
+            updateThemeIcon(savedTheme);
+
+            themeBtn.addEventListener('click', () => {
+                const currentTheme = htmlTag.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                
+                htmlTag.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                updateThemeIcon(newTheme);
+            });
+
+            function updateThemeIcon(theme) {
+                if(theme === 'dark') {
+                    themeIcon.innerHTML = sunIcon; // If dark, show sun to toggle light
+                    themeIcon.setAttribute('stroke', 'currentColor');
+                    themeIcon.setAttribute('stroke-width', '2');
+                    themeIcon.setAttribute('fill', 'none');
+                } else {
+                    themeIcon.innerHTML = moonIcon; // If light, show moon to toggle dark
+                    themeIcon.setAttribute('stroke', 'currentColor');
+                    themeIcon.setAttribute('stroke-width', '2');
+                    themeIcon.setAttribute('fill', 'none');
+                }
+            }
+
+            /* ==========================================================================
+               2. READING PROGRESS BAR
+               ========================================================================== */
+            const progressBar = document.getElementById('reading-progress');
+            
+            window.addEventListener('scroll', () => {
+                // Calculate scroll distance
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                // Calculate total scrollable height
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                // Calculate percentage
+                const scrolled = (winScroll / height) * 100;
+                
+                progressBar.style.width = scrolled + '%';
+            });
+
+            /* ==========================================================================
+               3. TABLE OF CONTENTS HIGHLIGHTING
+               ========================================================================== */
+            const tocLinks = document.querySelectorAll('.toc-list a');
+            const sections = document.querySelectorAll('h2[id]');
+            
+            // Intersection Observer for highlighting TOC on scroll
+            const observerOptions = {
+                root: null,
+                rootMargin: '-20% 0px -80% 0px', // Trigger when heading is near top
+                threshold: 0
+            };
+
+            const headingObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        
+                        // Remove active class from all links
+                        tocLinks.forEach(link => link.classList.remove('active'));
+                        
+                        // Add active class to corresponding link
+                        const activeLink = document.querySelector(`.toc-list a[href="#${id}"]`);
+                        if (activeLink) {
+                            activeLink.classList.add('active');
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                headingObserver.observe(section);
+            });
+
+            /* ==========================================================================
+               4. TERMINAL TYPEWRITER ANIMATION (Simulation)
+               ========================================================================== */
+            // We want to re-run the typing effect just once when the user scrolls to it
+            const terminalBody = document.getElementById('term-typing');
+            if (terminalBody) {
+                // Save the original spans
+                const lines = Array.from(terminalBody.querySelectorAll('span'));
+                
+                // Clear the terminal body initially
+                terminalBody.innerHTML = '';
+                
+                let isAnimating = false;
+                
+                const terminalObserver = new IntersectionObserver((entries) => {
+                    if (entries[0].isIntersecting && !isAnimating) {
+                        isAnimating = true;
+                        runTerminalAnimation(lines);
+                    }
+                }, { threshold: 0.5 });
+                
+                terminalObserver.observe(terminalBody.parentElement);
+                
+                function runTerminalAnimation(lineElements) {
+                    let currentLine = 0;
+                    
+                    function showNextLine() {
+                        if (currentLine < lineElements.length) {
+                            const el = lineElements[currentLine];
+                            // Create a cursor element
+                            const cursor = document.createElement('span');
+                            cursor.textContent = '█';
+                            cursor.style.animation = 'blink 1s step-end infinite';
+                            
+                            // Append the line empty
+                            const lineContainer = document.createElement('span');
+                            lineContainer.className = el.className;
+                            terminalBody.appendChild(lineContainer);
+                            
+                            const textToType = el.textContent;
+                            let charIndex = 0;
+                            
+                            function typeChar() {
+                                if (charIndex < textToType.length) {
+                                    lineContainer.textContent = textToType.substring(0, charIndex + 1);
+                                    lineContainer.appendChild(cursor);
+                                    charIndex++;
+                                    setTimeout(typeChar, Math.random() * 20 + 10); // typing speed
+                                } else {
+                                    // Line finished
+                                    lineContainer.removeChild(cursor);
+                                    currentLine++;
+                                    
+                                    // Pause between lines based on content
+                                    let delay = 300;
+                                    if(textToType.includes('Synthesizing')) delay = 800;
+                                    if(textToType.includes('Structuring')) delay = 600;
+                                    
+                                    setTimeout(showNextLine, delay);
+                                }
+                            }
+                            typeChar();
+                        } else {
+                            // Finish with blinking cursor
+                            const finalCursor = document.createElement('span');
+                            finalCursor.textContent = '> █';
+                            finalCursor.style.animation = 'blink 1s step-end infinite';
+                            finalCursor.style.color = 'var(--text-code)';
+                            terminalBody.appendChild(finalCursor);
+                        }
+                    }
+                    
+                    showNextLine();
+                }
+            }
+
+            // Append cursor blink animation style dynamically to document
+            const style = document.createElement('style');
+            style.innerHTML = `
+                @keyframes blink {
+                    0%, 100% { opacity: 1; }
+                    50% { opacity: 0; }
+                }
+            `;
+            document.head.appendChild(style);
+
+            /* ==========================================================================
+               5. SMOOTH SCROLLING FOR TOC LINKS
+               ========================================================================== */
+            tocLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        // Account for sticky header
+                        const headerOffset = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) + 20;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+        });
+    </script>
+</body>
+</html>
