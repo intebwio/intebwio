@@ -1,10 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Main Application / Home Page -->
   <url>
-    <loc>https://intebwio.github.io/intebwio</loc>
-    <!-- Use today's date or the date you last updated the article -->
-    <lastmod>2026-04-21</lastmod>
+    <loc>https://intebwio.github.io/intebwio/</loc>
+    <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Creator Profile - English (Default) -->
+  <url>
+    <loc>https://intebwio.github.io/intebwio/aboutcreatorofintebwio.html</loc>
+    <lastmod>2026-04-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://intebwio.github.io/intebwio/aboutcreatorofintebwio.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://intebwio.github.io/intebwio/ru/aboutcreatorofintebwio.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://intebwio.github.io/intebwio/uk/aboutcreatorofintebwio.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://intebwio.github.io/intebwio/de/aboutcreatorofintebwio.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://intebwio.github.io/intebwio/pt/aboutcreatorofintebwio.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://intebwio.github.io/intebwio/aboutcreatorofintebwio.html" />
+  </url>
+
+  <!-- Creator Profile - Russian -->
+  <url>
+    <loc>https://intebwio.github.io/intebwio/ru/aboutcreatorofintebwio.html</loc>
+    <lastmod>2026-04-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://intebwio.github.io/intebwio/aboutcreatorofintebwio.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://intebwio.github.io/intebwio/ru/aboutcreatorofintebwio.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://intebwio.github.io/intebwio/uk/aboutcreatorofintebwio.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://intebwio.github.io/intebwio/de/aboutcreatorofintebwio.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://intebwio.github.io/intebwio/pt/aboutcreatorofintebwio.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://intebwio.github.io/intebwio/aboutcreatorofintebwio.html" />
+  </url>
+
+  <!-- Creator Profile - Ukrainian -->
+  <url>
+    <loc>https://intebwio.github.io/intebwio/uk/aboutcreatorofintebwio.html</loc>
+    <lastmod>2026-04-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://intebwio.github.io/intebwio/aboutcreatorofintebwio.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://intebwio.github.io/intebwio/ru/aboutcreatorofintebwio.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://intebwio.github.io/intebwio/uk/aboutcreatorofintebwio.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://intebwio.github.io/intebwio/de/aboutcreatorofintebwio.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://intebwio.github.io/intebwio/pt/aboutcreatorofintebwio.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://intebwio.github.io/intebwio/aboutcreatorofintebwio.html" />
+  </url>
+
+  <!-- Creator Profile - German -->
+  <url>
+    <loc>https://intebwio.github.io/intebwio/de/aboutcreatorofintebwio.html</loc>
+    <lastmod>2026-04-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://intebwio.github.io/intebwio/aboutcreatorofintebwio.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://intebwio.github.io/intebwio/ru/aboutcreatorofintebwio.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://intebwio.github.io/intebwio/uk/aboutcreatorofintebwio.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://intebwio.github.io/intebwio/de/aboutcreatorofintebwio.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://intebwio.github.io/intebwio/pt/aboutcreatorofintebwio.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://intebwio.github.io/intebwio/aboutcreatorofintebwio.html" />
+  </url>
+
+  <!-- Creator Profile - Portuguese -->
+  <url>
+    <loc>https://intebwio.github.io/intebwio/pt/aboutcreatorofintebwio.html</loc>
+    <lastmod>2026-04-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://intebwio.github.io/intebwio/aboutcreatorofintebwio.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://intebwio.github.io/intebwio/ru/aboutcreatorofintebwio.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://intebwio.github.io/intebwio/uk/aboutcreatorofintebwio.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://intebwio.github.io/intebwio/de/aboutcreatorofintebwio.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://intebwio.github.io/intebwio/pt/aboutcreatorofintebwio.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://intebwio.github.io/intebwio/aboutcreatorofintebwio.html" />
+  </url>
+
 </urlset>
