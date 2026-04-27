@@ -1,0 +1,1694 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="dark">
+<head>
+    <!-- 
+      PROJECT: Tech Review Blog - Creator Profile
+      SUBJECT: Yaroslav Ostapenko (Creator of Intebwio)
+      AUTHOR: Tech Reviewer
+      This document is a highly optimized, responsive, and interactive single-page profile article.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- SEO & Meta Tags -->
+    <title>Yaroslav Ostapenko: Il Visionario Dietro Intebwio | Tech Review</title>
+    <meta name="description" content="Un'analisi tecnica esclusiva e approfondita su Yaroslav Ostapenko, il creatore e capo architetto di Intebwio, esplorando il suo portfolio, la sua filosofia e il futuro della navigazione web.">
+    
+    <!-- FIRST KEYWORD MUST BE YAROSLAV OSTAPENKO -->
+    <meta name="keywords" content="Yaroslav Ostapenko, creatore di Intebwio, browser IA generativa, ingegnere informatico, tech review, evoluzione della ricerca web, intelligenza artificiale, analisi del portfolio, innovatore tecnologico">
+    
+    <meta name="author" content="Tech Reviewer">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://intebwio.github.io/intebwio/it/aboutcreatorofintebwio.html">
+    
+    <!-- Open Graph / Social Media Tags -->
+    <meta property="og:title" content="Yaroslav Ostapenko: Il Visionario Dietro Intebwio">
+    <meta property="og:description" content="Esplora la mente e la filosofia tecnica di Yaroslav Ostapenko, lo sviluppatore che sta rivoluzionando la ricerca web con il motore di sintesi Intebwio.">
+    <meta property="og:url" content="https://intebwio.github.io/intebwio/it/aboutcreatorofintebwio.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Tech Review Blog">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Yaroslav Ostapenko: L'Architetto di Intebwio">
+    <meta name="twitter:description" content="Una recensione completa del lavoro, del portfolio e del rivoluzionario progetto Intebwio di Yaroslav Ostapenko.">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph":[
+        {
+          "@type": "Person",
+          "@id": "https://jaroslawostapenko.mqttwebs.com/#person",
+          "name": "Yaroslav Ostapenko",
+          "jobTitle": "Ingegnere Informatico & Fondatore",
+          "url": "https://jaroslawostapenko.mqttwebs.com/",
+          "knowsAbout":["Sviluppo Web", "Intelligenza Artificiale", "UI Generativa", "Ingegneria del Software"],
+          "memberOf": {
+            "@type": "Organization",
+            "name": "Intebwio"
+          }
+        },
+        {
+          "@type": "Article",
+          "headline": "Yaroslav Ostapenko: Il Visionario Dietro Intebwio",
+          "description": "Un'analisi tecnica esclusiva e approfondita su Yaroslav Ostapenko, il creatore e capo architetto di Intebwio.",
+          "author": {
+            "@type": "Person",
+            "name": "Tech Reviewer"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Tech Review Blog",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://intebwio.github.io/intebwio/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://intebwio.github.io/intebwio/it/aboutcreatorofintebwio.html"
+          },
+          "about": {"@id": "https://jaroslawostapenko.mqttwebs.com/#person"}
+        }
+      ]
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@300;400;500;600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+
+    <!-- CSS STYLESHEET -->
+    <style>
+        /* ==========================================================================
+           1. CSS VARIABLES & THEME SYSTEM
+           ========================================================================== */
+        :root[data-theme="light"] {
+            /* Backgrounds */
+            --bg-body: #f8fafc;
+            --bg-surface: #ffffff;
+            --bg-surface-alt: #f1f5f9;
+            --bg-surface-hover: #e2e8f0;
+            --bg-code: #1e293b;
+            --bg-hero: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            
+            /* Text Colors */
+            --text-main: #334155;
+            --text-heading: #0f172a;
+            --text-muted: #64748b;
+            --text-code: #e2e8f0;
+            --text-inverse: #ffffff;
+            
+            /* Borders */
+            --border-color: #e2e8f0;
+            --border-light: #cbd5e1;
+            
+            /* Accents */
+            --accent-primary: #2563eb;
+            --accent-secondary: #7c3aed;
+            --accent-hover: #1d4ed8;
+            --accent-glow: rgba(37, 99, 235, 0.2);
+            --highlight-bg: rgba(37, 99, 235, 0.1);
+            
+            /* Status Colors */
+            --success-color: #059669;
+            --danger-color: #dc2626;
+            --warning-color: #d97706;
+            --info-color: #0284c7;
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        :root[data-theme="dark"] {
+            /* Backgrounds */
+            --bg-body: #090e17;
+            --bg-surface: #131c2c;
+            --bg-surface-alt: #1a2639;
+            --bg-surface-hover: #233248;
+            --bg-code: #0b1120;
+            --bg-hero: linear-gradient(135deg, #0f172a 0%, #020617 100%);
+            
+            /* Text Colors */
+            --text-main: #cbd5e1;
+            --text-heading: #f8fafc;
+            --text-muted: #94a3b8;
+            --text-code: #e2e8f0;
+            --text-inverse: #ffffff;
+            
+            /* Borders */
+            --border-color: #2e4057;
+            --border-light: #3b506c;
+            
+            /* Accents */
+            --accent-primary: #3b82f6;
+            --accent-secondary: #8b5cf6;
+            --accent-hover: #60a5fa;
+            --accent-glow: rgba(59, 130, 246, 0.4);
+            --highlight-bg: rgba(59, 130, 246, 0.15);
+            
+            /* Status Colors */
+            --success-color: #34d399;
+            --danger-color: #f87171;
+            --warning-color: #fbbf24;
+            --info-color: #38bdf8;
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.4);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 10px 10px -5px rgba(0, 0, 0, 0.5);
+        }
+
+        :root {
+            /* Typography */
+            --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            --font-serif: 'Merriweather', Georgia, Cambria, "Times New Roman", Times, serif;
+            --font-mono: 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            
+            /* Layout Dimensions */
+            --max-width-article: 850px;
+            --max-width-layout: 1300px;
+            --header-height: 72px;
+            
+            /* Animation & Transitions */
+            --transition-fast: 0.15s ease-in-out;
+            --transition-normal: 0.3s ease-in-out;
+            --transition-slow: 0.5s ease-in-out;
+            --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* ==========================================================================
+           2. RESET & BASE
+           ========================================================================== */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: calc(var(--header-height) + 2rem);
+            font-size: 16px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.75;
+            font-size: 1.125rem;
+            transition: background-color var(--transition-normal), color var(--transition-normal);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        a {
+            color: var(--accent-primary);
+            text-decoration: none;
+            transition: color var(--transition-fast), text-shadow var(--transition-fast);
+            position: relative;
+        }
+
+        .article-body a:not(.btn)::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--accent-hover);
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        .article-body a:not(.btn):hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        .article-body a:hover {
+            color: var(--accent-hover);
+        }
+
+        img, svg, video, canvas {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        ul, ol {
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background-color: var(--border-color);
+            margin: 3rem 0;
+            transition: background-color var(--transition-normal);
+        }
+
+        /* ==========================================================================
+           3. TYPOGRAPHY
+           ========================================================================== */
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--text-heading);
+            font-weight: 700;
+            line-height: 1.25;
+            margin-top: 2.5rem;
+            margin-bottom: 1.25rem;
+            font-family: var(--font-sans);
+            transition: color var(--transition-normal);
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            line-height: 1.1;
+            letter-spacing: -0.04em;
+            margin-top: 0;
+            font-weight: 800;
+        }
+
+        h2 {
+            font-size: clamp(1.75rem, 3vw, 2.5rem);
+            letter-spacing: -0.02em;
+            position: relative;
+            padding-bottom: 0.75rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+            border-radius: 3px;
+        }
+
+        h3 {
+            font-size: clamp(1.25rem, 2vw, 1.75rem);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+
+        strong, b {
+            font-weight: 700;
+            color: var(--text-heading);
+        }
+
+        em, i {
+            font-style: italic;
+        }
+
+        blockquote {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            font-style: italic;
+            border-left: 4px solid var(--accent-primary);
+            background: var(--highlight-bg);
+            padding: 1.5rem 2rem;
+            margin: 2.5rem 0;
+            border-radius: 0 12px 12px 0;
+            color: var(--text-heading);
+            position: relative;
+        }
+
+        blockquote::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            font-family: var(--font-serif);
+            font-size: 4rem;
+            color: var(--accent-primary);
+            opacity: 0.2;
+            line-height: 1;
+        }
+
+        code {
+            font-family: var(--font-mono);
+            font-size: 0.85em;
+            background-color: var(--bg-surface-alt);
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+            color: var(--accent-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        /* ==========================================================================
+           4. LAYOUT & GRID
+           ========================================================================== */
+        .site-container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .layout-wrapper {
+            max-width: var(--max-width-layout);
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 4rem;
+            align-items: start;
+            flex-grow: 1;
+        }
+
+        .main-content {
+            min-width: 0;
+            padding-bottom: 4rem;
+        }
+
+        /* ==========================================================================
+           5. HEADER & NAVIGATION
+           ========================================================================== */
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--header-height);
+            background-color: rgba(var(--bg-surface), 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            transition: background-color var(--transition-normal), border-color var(--transition-normal);
+        }
+
+        .nav-container {
+            width: 100%;
+            max-width: var(--max-width-layout);
+            height: 100%;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .site-brand {
+            font-weight: 800;
+            font-size: 1.25rem;
+            color: var(--text-heading);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        .site-brand svg {
+            width: 28px;
+            height: 28px;
+            stroke: var(--accent-primary);
+        }
+
+        .site-brand:hover {
+            color: var(--accent-primary);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: var(--text-main);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-primary);
+        }
+
+        .theme-toggle {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: var(--text-main);
+            transition: all var(--transition-fast);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .theme-toggle:hover {
+            background-color: var(--bg-surface-alt);
+            color: var(--accent-primary);
+            border-color: var(--accent-primary);
+            transform: scale(1.05);
+        }
+
+        .progress-container {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: transparent;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+            width: 0%;
+            transition: width 0.1s ease-out;
+        }
+
+        /* ==========================================================================
+           6. HERO SECTION
+           ========================================================================== */
+        .hero {
+            position: relative;
+            padding: calc(var(--header-height) + 4rem) 2rem 4rem;
+            background: var(--bg-hero);
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 3rem;
+            overflow: hidden;
+        }
+
+        /* Network Background Canvas */
+        #network-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: var(--max-width-article);
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--highlight-bg);
+            color: var(--accent-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 99px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--accent-glow);
+            backdrop-filter: blur(4px);
+        }
+
+        .hero-title {
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.35rem);
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-meta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            flex-wrap: wrap;
+        }
+
+        .hero-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .hero-meta-item svg {
+            width: 18px;
+            height: 18px;
+            stroke: currentColor;
+            stroke-width: 2;
+            fill: none;
+        }
+
+        /* ==========================================================================
+           7. ARTICLE COMPONENTS
+           ========================================================================== */
+        
+        /* Intro Dropcap */
+        .dropcap::first-letter {
+            font-family: var(--font-serif);
+            float: left;
+            font-size: 4.5rem;
+            line-height: 0.8;
+            padding-top: 4px;
+            padding-right: 8px;
+            padding-left: 3px;
+            color: var(--accent-primary);
+            font-weight: 700;
+        }
+
+        /* Feature Cards (Used for Skills/Philosophies) */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+            opacity: 0;
+            transition: opacity var(--transition-normal);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--border-light);
+        }
+
+        .feature-card:hover::before {
+            opacity: 1;
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: var(--highlight-bg);
+            color: var(--accent-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: currentColor;
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .feature-card h3 {
+            margin-top: 0;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        /* Callout Box / Alert */
+        .callout {
+            background-color: var(--bg-surface-alt);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--info-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .callout-icon {
+            flex-shrink: 0;
+            color: var(--info-color);
+        }
+
+        .callout-content p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        .callout-content p + p {
+            margin-top: 0.75rem;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            text-decoration: none;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-primary);
+            color: #ffffff !important;
+            box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.39);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.23);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--text-heading) !important;
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent-primary);
+            color: var(--accent-primary) !important;
+            background-color: var(--highlight-bg);
+        }
+
+        /* Interactive Skill Bars */
+        .skills-container {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 3rem 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .skill-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .skill-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .skill-bar-bg {
+            width: 100%;
+            height: 8px;
+            background-color: var(--bg-surface-alt);
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .skill-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+            border-radius: 4px;
+            width: 0; /* Animated via JS */
+            transition: width 1.5s var(--ease-spring);
+        }
+
+        /* Terminal UI Simulation */
+        .terminal-ui {
+            background-color: #0d1117; /* GitHub dark theme code bg */
+            border-radius: 12px;
+            border: 1px solid #30363d;
+            overflow: hidden;
+            margin: 3rem 0;
+            box-shadow: var(--shadow-xl);
+            font-family: var(--font-mono);
+        }
+
+        .terminal-header {
+            background-color: #161b22;
+            padding: 0.75rem 1rem;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #30363d;
+        }
+
+        .terminal-dots {
+            display: flex;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .dot-red { background-color: #ff5f56; }
+        .dot-yel { background-color: #ffbd2e; }
+        .dot-grn { background-color: #27c93f; }
+
+        .terminal-title {
+            margin: 0 auto;
+            color: #8b949e;
+            font-size: 0.85rem;
+        }
+
+        .terminal-body {
+            padding: 1.5rem;
+            color: #c9d1d9;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            overflow-x: auto;
+        }
+
+        .token-keyword { color: #ff7b72; }
+        .token-function { color: #d2a8ff; }
+        .token-string { color: #a5d6ff; }
+        .token-comment { color: #8b949e; font-style: italic; }
+
+        /* ==========================================================================
+           8. SIDEBAR & WIDGETS
+           ========================================================================== */
+        .sidebar {
+            position: sticky;
+            top: calc(var(--header-height) + 2rem);
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            max-height: calc(100vh - var(--header-height) - 4rem);
+            overflow-y: auto;
+            padding-right: 0.5rem;
+            scrollbar-width: thin;
+            scrollbar-color: var(--border-color) transparent;
+        }
+
+        .sidebar::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .sidebar::-webkit-scrollbar-thumb {
+            background-color: var(--border-color);
+            border-radius: 10px;
+        }
+
+        .widget {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .widget-title {
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-heading);
+            margin-bottom: 1.25rem;
+            margin-top: 0;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Author Widget */
+        .author-widget {
+            text-align: center;
+        }
+
+        .author-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--text-heading), var(--text-muted));
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--bg-surface);
+            font-weight: 800;
+            font-size: 1.5rem;
+            border: 4px solid var(--bg-surface-alt);
+            box-shadow: var(--shadow-md);
+        }
+
+        .author-name {
+            font-weight: 700;
+            color: var(--text-heading);
+            margin-bottom: 0.25rem;
+            font-size: 1.1rem;
+        }
+
+        .author-role {
+            font-size: 0.85rem;
+            color: var(--accent-primary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+        }
+
+        .author-bio {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        /* Table of Contents */
+        .toc-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: relative;
+        }
+
+        .toc-list::before {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--border-color);
+            z-index: 0;
+        }
+
+        .toc-list li {
+            margin-bottom: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .toc-list a {
+            display: block;
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all var(--transition-fast);
+            position: relative;
+        }
+
+        .toc-list a::before {
+            content: '';
+            position: absolute;
+            left: 2px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--bg-surface);
+            border: 2px solid var(--border-color);
+            transition: all var(--transition-fast);
+        }
+
+        .toc-list a:hover {
+            color: var(--text-heading);
+        }
+
+        .toc-list a:hover::before {
+            border-color: var(--accent-primary);
+        }
+
+        .toc-list a.active {
+            color: var(--accent-primary);
+            font-weight: 600;
+        }
+
+        .toc-list a.active::before {
+            background-color: var(--accent-primary);
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 0 3px var(--highlight-bg);
+        }
+
+        /* Tags */
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background: var(--bg-surface-alt);
+            color: var(--text-main);
+            font-size: 0.8rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            transition: all var(--transition-fast);
+        }
+
+        .tag:hover {
+            border-color: var(--accent-primary);
+            color: var(--accent-primary);
+            background: var(--highlight-bg);
+        }
+
+        /* ==========================================================================
+           9. FOOTER
+           ========================================================================== */
+        .site-footer {
+            background-color: var(--bg-surface);
+            border-top: 1px solid var(--border-color);
+            padding: 4rem 2rem 2rem;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: var(--max-width-layout);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            color: var(--text-heading);
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-primary);
+        }
+
+        .footer-bottom {
+            max-width: var(--max-width-layout);
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        /* ==========================================================================
+           10. MEDIA QUERIES
+           ========================================================================== */
+        @media (max-width: 1024px) {
+            .layout-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                display: none; /* Hide sidebar on tablet/mobile to focus on article */
+            }
+            .hero-title {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Hide main links, keep theme toggle */
+            }
+            .hero {
+                padding: calc(var(--header-height) + 2rem) 1.5rem 3rem;
+            }
+            .hero-title {
+                font-size: 2.25rem;
+            }
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+            blockquote {
+                padding: 1.5rem;
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="site-container">
+        
+        <!-- Header Navigation -->
+        <header class="site-header">
+            <div class="nav-container">
+                <a href="https://intebwio.github.io/intebwio/" class="site-brand" aria-label="Home del Blog Tech Review">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                    </svg>
+                    Tech Review
+                </a>
+                
+                <div class="nav-actions">
+                    <ul class="nav-links">
+                        <li><a href="https://intebwio.github.io/intebwio/">Leggi la Recensione di Intebwio</a></li>
+                        <li><a href="https://jaroslawostapenko.mqttwebs.com/" target="_blank" rel="noopener">Portfolio del Creatore</a></li>
+                    </ul>
+                    <button class="theme-toggle" id="theme-btn" aria-label="Alterna Modalità Chiara/Scura" title="Cambia Tema">
+                        <svg id="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- Default to Moon (Light Mode visible icon) -->
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-bar" id="reading-progress"></div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <canvas id="network-canvas"></canvas>
+            <div class="hero-content">
+                <span class="hero-badge">Profilo del Creatore</span>
+                <h1 class="hero-title">Yaroslav Ostapenko: L'Architetto di Intebwio</h1>
+                <p class="hero-subtitle">Esplorando la mente, il portfolio e la filosofia tecnica dell'ingegnere informatico che sta ridefinendo il modo in cui recuperiamo le informazioni sul web.</p>
+                
+                <div class="hero-meta">
+                    <div class="hero-meta-item">
+                        <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        <span>Profilo a cura di Tech Reviewer</span>
+                    </div>
+                    <div class="hero-meta-item">
+                        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                        <span>Aggiornato: Fine 2026</span>
+                    </div>
+                    <div class="hero-meta-item">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        <span>10 min di lettura</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Layout -->
+        <div class="layout-wrapper">
+            
+            <!-- Article Content -->
+            <main class="main-content">
+                <article class="article-body">
+                    
+                    <p class="dropcap">In un panorama digitale dominato da enormi conglomerati tecnologici e motori di ricerca obsoleti, la vera innovazione nasce spesso da sviluppatori indipendenti che si rifiutano di accettare lo status quo. Recentemente, ho scritto un'ampia <a href="https://intebwio.github.io/intebwio/">recensione tecnica su Intebwio</a>, un "motore di sintesi" radicalmente nuovo che aggira del tutto la ricerca tradizionale, scegliendo invece di generare pagine web su misura e senza pubblicità utilizzando l'IA. Ma il software non si scrive da solo. Dietro ogni progetto dirompente c'è una mente che ha percepito un problema e ha progettato una soluzione.</p>
+                    
+                    <p>Oggi spostiamo l'attenzione dal prodotto al creatore. Ci immergiamo profondamente nella carriera, nel portfolio e nella filosofia ingegneristica di <strong>Yaroslav Ostapenko</strong>, fondatore e capo architetto di Intebwio.</p>
+
+                    <h2 id="who-is-yaroslav">Chi è Yaroslav Ostapenko?</h2>
+                    
+                    <p>Yaroslav Ostapenko è un ingegnere informatico con un'attenzione particolare all'intersezione tra Intelligenza Artificiale Generativa, framework frontend moderni e design dell'esperienza utente (UX). Mentre molti sviluppatori si concentrano sull'iterazione di paradigmi esistenti — costruendo indici di ricerca più veloci o componenti dell'interfaccia utente più belli per siti web standard — il lavoro di Ostapenko indica il desiderio di ripensare i percorsi fondamentali degli utenti.</p>
+
+                    <div class="callout">
+                        <div class="callout-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                        </div>
+                        <div class="callout-content">
+                            <p><strong>Nota del Recensore:</strong> Questo profilo si basa sull'analisi dei progetti pubblici di Yaroslav, in particolare Intebwio, e sul suo portfolio professionale. Non sono affiliato a Yaroslav; sono un recensore tecnologico indipendente che analizza il suo impatto sull'architettura web.</p>
+                        </div>
+                    </div>
+
+                    <p>Il suo approccio all'ingegneria del software è altamente multidisciplinare. Per costruire uno strumento come Intebwio, non si può essere semplicemente uno "sviluppatore frontend" o un "prompt engineer". Richiede un profondo pensiero sistemico. Guardando il suo <a href="https://jaroslawostapenko.mqttwebs.com/" target="_blank" rel="noopener">portfolio ufficiale</a>, diventa evidente che il suo stack tecnologico è progettato specificamente per gestire l'orchestrazione di dati complessi e il rendering in tempo reale.</p>
+
+                    <h2 id="technical-philosophy">Filosofia Tecnica e Competenze</h2>
+
+                    <p>Ciò che fa risaltare il lavoro di Yaroslav Ostapenko è il suo impegno per la <strong>UI Generativa</strong>. Lo sviluppo web tradizionale separa il contenuto dal layout. Un database contiene il testo; un framework frontend detta come appare. La metodologia di Yaroslav fonde questi concetti. Utilizzando modelli linguistici di grandi dimensioni (LLM), crea sistemi in cui l'IA determina non solo *cosa* dire, ma *come* strutturarlo visivamente.</p>
+
+                    <p>Sulla base dei suoi progetti pubblici e del suo portfolio, le sue competenze tecniche di base si suddividono in diverse aree chiave:</p>
+
+                    <!-- Interactive Skill Bars -->
+                    <div class="skills-container" id="skills-section">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Architettura Frontend Avanzata (React/Next.js)</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-width="95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Integrazione dell'IA Generativa (LLM, API Gemini)</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Orchestrazione dei Dati e Ingegneria degli Schemi JSON</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Design UI/UX e Layout Dinamici</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-width="88%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p>Come si evince dall'analisi tecnica qui sopra, Yaroslav non si limita a connettere API. Sta progettando schemi JSON complessi che costringono gli LLM a produrre dati strutturati, che le sue applicazioni frontend poi analizzano e renderizzano in componenti belli e interattivi.</p>
+
+                    <h2 id="portfolio-review">Un'Analisi Approfondita del Portfolio</h2>
+
+                    <p>Se visiti <a href="https://jaroslawostapenko.mqttwebs.com/" target="_blank" rel="noopener">jaroslawostapenko.mqttwebs.com</a>, vieni accolto da uno spazio digitale che rispecchia perfettamente l'estetica dei suoi progetti: pulito, orientato alla dark-mode, altamente performante e rigorosamente focalizzato sul rapporto segnale-rumore.</p>
+
+                    <p>Il portfolio di uno sviluppatore è spesso una finestra sulle sue priorità. Ecco cosa rivela la mia recensione del suo portfolio su Yaroslav come ingegnere:</p>
+
+                    <div class="card-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
+                            </div>
+                            <h3>Funzionalità Minimalista</h3>
+                            <p>Non c'è alcun peso inutile. La sua presenza digitale privilegia la velocità di caricamento e la consegna immediata di valore, esattamente come il browser Intebwio.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                            </div>
+                            <h3>Ecosistema Web-First</h3>
+                            <p>I suoi progetti sono fortemente basati sul web, utilizzando il browser come sistema operativo definitivo per l'interazione con l'IA.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                            </div>
+                            <h3>Difesa del Web Aperto</h3>
+                            <p>Progettando soluzioni generative prive di pubblicità, il lavoro di Ostapenko protesta sottilmente contro l'attuale modello di entrate pubblicitarie di Internet.</p>
+                        </div>
+                    </div>
+
+                    <h2 id="building-intebwio">La Mentalità Dietro Intebwio</h2>
+
+                    <p>Per comprendere il creatore, dobbiamo guardare alla sua opera magna. Come descritto nella mia <a href="https://intebwio.github.io/intebwio/">precedente recensione</a>, Intebwio è un cambio di paradigma. Ma perché costruirlo?</p>
+                    
+                    <blockquote>
+                        "Internet è stato concepito come una biblioteca, ma è diventato un cartellone pubblicitario. Cercare informazioni oggi significa destreggiarsi tra contenuti riempitivi ottimizzati per la SEO. Yaroslav ha capito che gli LLM potevano aggirare completamente l'indice e sintetizzare la biblioteca direttamente per l'utente."<br><br>
+                        <span style="font-size: 0.9rem; font-style: normal; color: var(--text-muted);">&mdash; Analisi del Tech Review Blog</span>
+                    </blockquote>
+
+                    <p>Questo richiede una mentalità architettonica specifica. Diamo un'occhiata a un frammento di codice concettuale che illustra il tipo di orchestrazione che Yaroslav deve costruire per far funzionare Intebwio. Questo snippet TypeScript simulato mostra il ponte tra l'intento dell'utente e il layout generativo:</p>
+
+                    <!-- Code Simulation -->
+                    <div class="terminal-ui">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <div class="dot dot-red"></div>
+                                <div class="dot dot-yel"></div>
+                                <div class="dot dot-grn"></div>
+                            </div>
+                            <div class="terminal-title">SynthesisEngine.ts</div>
+                        </div>
+                        <div class="terminal-body">
+<pre><code><span class="token-comment">// Architettura Concettuale del Motore Intebwio di Yaroslav</span>
+<span class="token-keyword">import</span> { LLMService } <span class="token-keyword">from</span> <span class="token-string">'@/core/ai'</span>;
+<span class="token-keyword">import</span> { UIRenderer } <span class="token-keyword">from</span> <span class="token-string">'@/core/layout'</span>;
+
+<span class="token-keyword">export class</span> SynthesisEngine {
+  <span class="token-keyword">private</span> ai: LLMService;
+  <span class="token-keyword">private</span> renderer: UIRenderer;
+
+  <span class="token-keyword">constructor</span>() {
+    <span class="token-keyword">this</span>.ai = <span class="token-keyword">new</span> LLMService(process.env.GEMINI_KEY);
+    <span class="token-keyword">this</span>.renderer = <span class="token-keyword">new</span> UIRenderer();
+  }
+
+  <span class="token-keyword">public async</span> <span class="token-function">generatePage</span>(query: <span class="token-keyword">string</span>) {
+    <span class="token-comment">// 1. Sintetizzare la conoscenza in un JSON strutturato</span>
+    <span class="token-keyword">const</span> schema = <span class="token-keyword">await</span> <span class="token-keyword">this</span>.ai.<span class="token-function">processQuery</span>(query, {
+      enforceFormat: <span class="token-string">'StrictJSON'</span>,
+      requireDataViz: <span class="token-keyword">true</span>
+    });
+
+    <span class="token-comment">// 2. Mappare l'output dell'IA direttamente su componenti React dinamici</span>
+    <span class="token-keyword">const</span> virtualDOM = <span class="token-keyword">this</span>.renderer.<span class="token-function">mapSchemaToComponents</span>(schema);
+
+    <span class="token-comment">// 3. Servire istantaneamente la pagina su misura senza pubblicità</span>
+    <span class="token-keyword">return</span> virtualDOM;
+  }
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <p>Scrivere codice come questo richiede l'abbandono dei modelli mentali dell'HTML statico. Yaroslav Ostapenko sta di fatto scrivendo software che scrive software in tempo reale.</p>
+
+                    <h2 id="the-future">Cosa Riserva il Futuro a Yaroslav?</h2>
+
+                    <p>Data la rapida evoluzione dell'IA, sviluppatori come Yaroslav si trovano in una posizione unica per plasmare il prossimo decennio del software. La transizione dal "cercare" al "generare" è appena iniziata. In base alla traiettoria di Intebwio e alle competenze dimostrate nel suo portfolio, prevedo che vedremo Ostapenko spingersi sempre più a fondo nella generazione multimodale — forse integrando la sintesi di modelli 3D in tempo reale o lo scraping di dati API live direttamente nella pipeline di generazione del browser.</p>
+
+                    <p>Per gli aspiranti sviluppatori, Yaroslav Ostapenko rappresenta un eccellente caso di studio. Dimostra che non è necessario un team enorme di ingegneri per costruire qualcosa di rivoluzionario; serve una profonda comprensione degli strumenti emergenti (LLM, React moderno), frustrazione per i sistemi malfunzionanti (spam SEO) e l'esecuzione tecnica per colmare il divario.</p>
+
+                    <div style="text-align: center; margin: 4rem 0;">
+                        <p style="margin-bottom: 1.5rem; font-weight: 600; color: var(--text-heading);">Esplora ulteriori lavori di Yaroslav o leggi la mia recensione completa del suo browser.</p>
+                        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                            <a href="https://jaroslawostapenko.mqttwebs.com/" target="_blank" rel="noopener" class="btn btn-primary">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                Visita il Portfolio
+                            </a>
+                            <a href="https://intebwio.github.io/intebwio/" class="btn btn-outline">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                                Leggi la Recensione di Intebwio
+                            </a>
+                        </div>
+                    </div>
+
+                </article>
+            </main>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                
+                <!-- Author Widget -->
+                <div class="widget author-widget">
+                    <div class="author-avatar">TR</div>
+                    <div class="author-name">Tech Reviewer</div>
+                    <div class="author-role">Analista Indipendente</div>
+                    <p class="author-bio">Esploro i confini del web, recensendo strumenti innovativi, software di IA e gli sviluppatori che li creano.</p>
+                </div>
+
+                <!-- Table of Contents Widget -->
+                <div class="widget">
+                    <h3 class="widget-title">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                        In Questo Articolo
+                    </h3>
+                    <ul class="toc-list" id="toc">
+                        <li><a href="#who-is-yaroslav">Chi è Yaroslav?</a></li>
+                        <li><a href="#technical-philosophy">Filosofia Tecnica</a></li>
+                        <li><a href="#portfolio-review">Analisi del Portfolio</a></li>
+                        <li><a href="#building-intebwio">Costruire Intebwio</a></li>
+                        <li><a href="#the-future">Cosa ci aspetta?</a></li>
+                    </ul>
+                </div>
+
+                <!-- Tags Widget -->
+                <div class="widget">
+                    <h3 class="widget-title">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+                        Argomenti
+                    </h3>
+                    <div class="tag-cloud">
+                        <span class="tag">Yaroslav Ostapenko</span>
+                        <span class="tag">Intebwio</span>
+                        <span class="tag">IA Generativa</span>
+                        <span class="tag">Ingegneria del Software</span>
+                        <span class="tag">React/Next.js</span>
+                        <span class="tag">Design UX</span>
+                    </div>
+                </div>
+
+                <!-- Related Links Widget -->
+                <div class="widget">
+                    <h3 class="widget-title">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                        Link di Riferimento
+                    </h3>
+                    <ul class="toc-list" style="margin-left: -10px;">
+                        <li style="margin-bottom: 0.5rem;"><a href="https://jaroslawostapenko.mqttwebs.com/" target="_blank" rel="noopener">Portfolio Ufficiale</a></li>
+                        <li><a href="https://intebwio.github.io/intebwio/">Approfondimento su Intebwio</a></li>
+                    </ul>
+                </div>
+
+            </aside>
+        </div>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <a href="#" class="site-brand" style="margin-bottom: 1rem;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                        </svg>
+                        Tech Review Blog
+                    </a>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">
+                        Giornalismo tecnologico indipendente incentrato sull'innovazione web, motori di sintesi IA e gli ingegneri del software che costruiscono il futuro di internet.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigazione</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://intebwio.github.io/intebwio/">Recensione Intebwio</a></li>
+                        <li><a href="#who-is-yaroslav">Profilo del Creatore</a></li>
+                        <li><a href="#portfolio-review">Analisi del Portfolio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Risorse Esterne</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://jaroslawostapenko.mqttwebs.com/" target="_blank" rel="noopener">Portfolio di Yaroslav Ostapenko</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>&copy; 2026 Tech Review Blog. Tutti i diritti riservati.</div>
+                <div>
+                    <span style="display: flex; gap: 1rem;">
+                        Disclaimer: Questa è una recensione indipendente.
+                    </span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            /* ==========================================================================
+               1. THEME MANAGEMENT
+               ========================================================================== */
+            const themeBtn = document.getElementById('theme-btn');
+            const themeIcon = document.getElementById('theme-icon');
+            const htmlTag = document.documentElement;
+            
+            // SVG Icons
+            const moonIcon = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>';
+            const sunIcon = '<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>';
+
+            // Init Theme
+            const savedTheme = localStorage.getItem('tr_theme') || 'dark'; // Default Dark
+            htmlTag.setAttribute('data-theme', savedTheme);
+            updateIcon(savedTheme);
+
+            themeBtn.addEventListener('click', () => {
+                const currentTheme = htmlTag.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                
+                htmlTag.setAttribute('data-theme', newTheme);
+                localStorage.setItem('tr_theme', newTheme);
+                updateIcon(newTheme);
+                
+                // Re-init canvas colors based on theme
+                initCanvasNetwork();
+            });
+
+            function updateIcon(theme) {
+                if(theme === 'dark') {
+                    themeIcon.innerHTML = sunIcon; 
+                } else {
+                    themeIcon.innerHTML = moonIcon; 
+                }
+            }
+
+            /* ==========================================================================
+               2. READING PROGRESS BAR
+               ========================================================================== */
+            const progressBar = document.getElementById('reading-progress');
+            
+            function updateProgress() {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                progressBar.style.width = scrolled + '%';
+            }
+            
+            window.addEventListener('scroll', updateProgress, { passive: true });
+
+            /* ==========================================================================
+               3. TOC SCROLL SPY & SMOOTH SCROLL
+               ========================================================================== */
+            const tocLinks = document.querySelectorAll('.toc-list a[href^="#"]');
+            const sections = document.querySelectorAll('h2[id]');
+            
+            // Intersection Observer for highlighting
+            const observerOptions = {
+                root: null,
+                rootMargin: '-100px 0px -60% 0px', 
+                threshold: 0
+            };
+
+            const headingObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        tocLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if(link.getAttribute('href') === `#${id}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => headingObserver.observe(section));
+
+            // Smooth Scroll for TOC
+            tocLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const headerOffset = 90; // Header height + padding
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Manually set active class
+                        tocLinks.forEach(l => l.classList.remove('active'));
+                        this.classList.add('active');
+                    }
+                });
+            });
+
+            /* ==========================================================================
+               4. ANIMATED SKILL BARS ON SCROLL
+               ========================================================================== */
+            const skillsSection = document.getElementById('skills-section');
+            const skillBars = document.querySelectorAll('.skill-bar-fill');
+            let animated = false;
+
+            const skillsObserver = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting && !animated) {
+                    animated = true;
+                    skillBars.forEach(bar => {
+                        const width = bar.getAttribute('data-width');
+                        // Small delay for staggered effect
+                        setTimeout(() => {
+                            bar.style.width = width;
+                        }, 150);
+                    });
+                }
+            }, { threshold: 0.2 });
+
+            if(skillsSection) {
+                skillsObserver.observe(skillsSection);
+            }
+
+            /* ==========================================================================
+               5. INTERACTIVE CANVAS BACKGROUND (Neural Network / Tech Vibe)
+               ========================================================================== */
+            let canvas, ctx, particles, animationFrameId;
+            
+            function initCanvasNetwork() {
+                if(animationFrameId) cancelAnimationFrame(animationFrameId);
+                
+                canvas = document.getElementById('network-canvas');
+                if(!canvas) return;
+                
+                ctx = canvas.getContext('2d');
+                
+                // Set canvas size
+                const heroSection = document.querySelector('.hero');
+                canvas.width = heroSection.offsetWidth;
+                canvas.height = heroSection.offsetHeight;
+                
+                // Get theme colors
+                const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+                const dotColor = isDark ? 'rgba(59, 130, 246, 0.4)' : 'rgba(37, 99, 235, 0.2)';
+                const lineColor = isDark ? 'rgba(59, 130, 246, 0.15)' : 'rgba(37, 99, 235, 0.1)';
+                
+                particles =[];
+                const particleCount = window.innerWidth > 768 ? 60 : 30;
+                
+                class Particle {
+                    constructor() {
+                        this.x = Math.random() * canvas.width;
+                        this.y = Math.random() * canvas.height;
+                        this.vx = (Math.random() - 0.5) * 0.5;
+                        this.vy = (Math.random() - 0.5) * 0.5;
+                        this.radius = Math.random() * 2 + 1;
+                    }
+                    
+                    update() {
+                        this.x += this.vx;
+                        this.y += this.vy;
+                        
+                        // Bounce off edges
+                        if(this.x < 0 || this.x > canvas.width) this.vx *= -1;
+                        if(this.y < 0 || this.y > canvas.height) this.vy *= -1;
+                    }
+                    
+                    draw() {
+                        ctx.beginPath();
+                        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                        ctx.fillStyle = dotColor;
+                        ctx.fill();
+                    }
+                }
+                
+                // Populate particles
+                for(let i = 0; i < particleCount; i++) {
+                    particles.push(new Particle());
+                }
+                
+                function animate() {
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    
+                    for(let i = 0; i < particles.length; i++) {
+                        particles[i].update();
+                        particles[i].draw();
+                        
+                        // Connect particles
+                        for(let j = i + 1; j < particles.length; j++) {
+                            const dx = particles[i].x - particles[j].x;
+                            const dy = particles[i].y - particles[j].y;
+                            const distance = Math.sqrt(dx * dx + dy * dy);
+                            
+                            if(distance < 120) {
+                                ctx.beginPath();
+                                ctx.strokeStyle = lineColor;
+                                ctx.lineWidth = 1;
+                                ctx.moveTo(particles[i].x, particles[i].y);
+                                ctx.lineTo(particles[j].x, particles[j].y);
+                                ctx.stroke();
+                            }
+                        }
+                    }
+                    animationFrameId = requestAnimationFrame(animate);
+                }
+                
+                animate();
+            }
+            
+            // Handle Resize for Canvas
+            window.addEventListener('resize', () => {
+                // Debounce resize
+                clearTimeout(window.resizeTimer);
+                window.resizeTimer = setTimeout(initCanvasNetwork, 200);
+            });
+            
+            // Initialize Canvas if user hasn't reduced motion
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if(!prefersReducedMotion) {
+                initCanvasNetwork();
+            }
+
+        });
+    </script>
+</body>
+</html>
